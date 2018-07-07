@@ -23,6 +23,8 @@ use function strcmp;
 use function trim;
 
 use const null;
+use const false;
+use const true;
 
 /**
  * @class      Debugger          The debugger.
