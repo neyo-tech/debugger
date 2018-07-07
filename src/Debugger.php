@@ -116,7 +116,7 @@ class Debugger implements DebuggerInterface
      */
     public static function isProductionMode(): bool
     {
-        return self::$production
+        return self::$production;
     }
 
     /**
@@ -126,6 +126,6 @@ class Debugger implements DebuggerInterface
      */
     public static function isDevelopmentMode(): bool
     {
-        return self::$development
+        return self::$development;
     }
 }
