@@ -59,7 +59,7 @@ class Debugger implements DebuggerInterface
      */
     public function __construct(ErrorHandlerInterface $errorHandler = null, ExceptionHandlerInterface $exceptionHandler = null)
     {
-        // If no handlers are provided use the framework error and exception handler.
+        // If no handlers are provided use the internal php error and exception handler.
         if (is_null($errorHandler)) {
             $errorHandler = new ErrorHandler('default');
         }
