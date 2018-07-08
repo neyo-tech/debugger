@@ -41,9 +41,9 @@ class Debugger implements DebuggerInterface
     private static $development = null;
 
     /**
-     * @var array            $modes            Contains a list of avaliable modes. 
-     * @var ErrorHandler     $errorHandler     The error handler.
-     * @var ExceptionHandler $exceptionHandler The exception handler.
+     * @var array                     $modes            Contains a list of avaliable modes. 
+     * @var ErrorHandlerInterface     $errorHandler     The error handler.
+     * @var ExceptionHandlerInterface $exceptionHandler The exception handler.
      */
     private $modes            = array('production', 'development');
     private $errorHandler     = null;
