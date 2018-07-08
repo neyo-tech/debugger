@@ -60,15 +60,14 @@ class Debugger implements DebuggerInterface
     public function __construct(ErrorHandlerInterface $errorHandler = null, ExceptionHandlerInterface $exceptionHandler = null)
     {
         // If no handlers are provided use the internal php error and exception handler.
-        if (is_null($errorHandler)) {
-            $errorHandler = new ErrorHandler('default');
+        if (!is_null($errorHandler)) {
+            // Bind the error hanlder.
+            $this->errorHandler = $errorHandler;
         }
-        if (is_null($exceptionHandler)) {
-            $exceptionHandler = new ExceptionHandler('default');
+        if (!is_null($exceptionHandler)) {
+            // Bind the exception hanlder.
+            $this->exceptionHandler = $exceptionHandler;
         }
-        // Bind the error and exception hanlder.
-        $this->errorHandler     = $errorHandler;
-        $this->exceptionHandler = $exceptionHandler;
     }
 
     /**
@@ -84,8 +83,12 @@ class Debugger implements DebuggerInterface
     public function run(string $mode = ''): void
     {
         // Set the error and exception handler.
-        set_error_handler($this->errorHandler->getCallable());
-        set_exception_handler($this->exceptionHandler->getCallable());
+        if (!is_null($this->errorHandler)) {
+            set_error_handler($this->errorHandler->getCallable());
+        }
+        if (!is_null($this->exceptionHandler)) {
+            set_exception_handler($this->exceptionHandler->getCallable());
+        }
         // Determine which mode is set.
         $mode = trim($mode);
         if (in_array($mode, $this->modes)) {
