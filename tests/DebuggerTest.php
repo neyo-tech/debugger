@@ -33,8 +33,8 @@ class DebuggerTest extends TestCase
         $this->assertTrue(Debugger::isProductionMode());
         $this->assertTrue(!Debugger::isDevelopmentMode());
         $debugger->run('development');
-        $this->assertTrue(Debugger::isProductionMode());
-        $this->assertTrue(!Debugger::isDevelopmentMode());
+        $this->assertTrue(!Debugger::isProductionMode());
+        $this->assertTrue(Debugger::isDevelopmentMode());
         $this->assertTrue(true);
     }
 }
