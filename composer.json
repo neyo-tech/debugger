@@ -1,0 +1,34 @@
+{
+    "name": "neyo/debugger",
+    "description": "A simple debugger for your web applications.",
+    "license": "MIT",
+    "keywords": [
+        "php7",
+        "debugger",
+        "exception-handler",
+        "error-handler",
+        "secure-coding"
+    ],
+    "support": {
+        "email": "ikorisabi@gmail.com"
+    },
+    "authors": [
+        {
+            "name": "Nicholas English",
+            "email": "ikorisabi@gmail.com",
+            "homepage": "https://github.com/ikorisabi",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5|^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neyo\\": "./src"
+        }
+    }
+}
