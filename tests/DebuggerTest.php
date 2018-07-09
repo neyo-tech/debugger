@@ -12,11 +12,11 @@ declare(strict_types=1);
 
 namespace Neyo\Tests;
 
-use UnexpectedValueException;
 use Neyo\Debugger;
 use Neyo\ErrorHandler;
 use Neyo\ExceptionHandler;
 use PHPUnit\Framework\TestCase;
+use UnexpectedValueException;
 use const true;
 
 /**
