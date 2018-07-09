@@ -34,19 +34,28 @@ class Debugger implements DebuggerInterface
 {
 
     /**
-     * @var bool $production  Is the environment running in production mode.
+     * @var bool $production Is the environment running in production mode.
+     */
+    private static $production = null;
+
+    /**
      * @var bool $development Is the environment running in development mode.
      */
-    private static $production  = null;
     private static $development = null;
 
     /**
-     * @var array                     $modes            Contains a list of avaliable modes. 
-     * @var ErrorHandlerInterface     $errorHandler     The error handler.
+     * @var array $modes Contains a list of avaliable modes.
+     */
+    private $modes = array('production', 'development');
+
+    /**
+     * @var ErrorHandlerInterface $errorHandler The error handler.
+     */
+    private $errorHandler = null;
+
+    /**
      * @var ExceptionHandlerInterface $exceptionHandler The exception handler.
      */
-    private $modes            = array('production', 'development');
-    private $errorHandler     = null;
     private $exceptionHandler = null;
 
     /**
