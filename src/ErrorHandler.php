@@ -58,6 +58,7 @@ class ErrorHandler implements ErrorHandlerInterface
      */
     public function getCallable()
     {
-        return $this->callableFunction();
+        $func = $this->callableFunction;
+        return $func();
     }
 }
