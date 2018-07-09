@@ -17,6 +17,11 @@
          timeoutForMediumTests="20"
          timeoutForLargeTests="30"
          verbose="false">
+    <testsuites>
+        <testsuite name="neyo-php-framework/debugger Test Suite">
+            <directory suffix=".php">./tests</directory>
+        </testsuite>
+    </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>

@@ -31,5 +31,8 @@
         "psr-4": {
             "Neyo\\": "./src"
         }
+    },
+    "autoload-dev": {
+        "files": ["./func.php"]
     }
 }
