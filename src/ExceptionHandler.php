@@ -58,6 +58,7 @@ class ExceptionHandler implements ExceptionHandlerInterface
      */
     public function getCallable()
     {
-        return $this->callableFunction();
+        $func = $this->callableFunction;
+        return $func();
     }
 }
