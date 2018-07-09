@@ -18,14 +18,6 @@ use Neyo\ExceptionHandler;
 use PHPUnit\Framework\TestCase;
 
 use const true;
-use const false;
-use const E_USER_ERROR;
-use const E_USER_WARNING;
-use const E_USER_NOTICE;
-use const PHP_VERSION;
-use const PHP_OS;
-
-use function error_reporting;
 
 /**
  * @class DebuggerTest The debugger test class.
