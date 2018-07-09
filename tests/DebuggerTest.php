@@ -30,11 +30,11 @@ class DebuggerTest extends TestCase
         $debugger = new Debugger($errorHandler, $exceptionHandler);
         $this->assertTrue(true);
         $debugger->run('production');
-        $this->assertTrue(Debugger::isProduction);
-        $this->assertTrue(!Debugger::isDevelopment);
+        $this->assertTrue(Debugger::isProduction());
+        $this->assertTrue(!Debugger::isDevelopment());
         $debugger->run('development');
-        $this->assertTrue(Debugger::isProduction);
-        $this->assertTrue(!Debugger::isDevelopment);
+        $this->assertTrue(Debugger::isProduction());
+        $this->assertTrue(!Debugger::isDevelopment());
         $this->assertTrue(true);
     }
 }
