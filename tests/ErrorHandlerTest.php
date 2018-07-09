@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace Neyo\Tests;
 
 use Neyo\ErrorHandler;
-
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
