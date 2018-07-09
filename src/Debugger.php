@@ -49,12 +49,12 @@ class Debugger implements DebuggerInterface
     private $modes = array('production', 'development');
 
     /**
-     * @var ErrorHandlerInterface $errorHandler The error handler.
+     * @var ErrorHandlerInterface|null $errorHandler The error handler.
      */
     private $errorHandler = null;
 
     /**
-     * @var ExceptionHandlerInterface $exceptionHandler The exception handler.
+     * @var ExceptionHandlerInterface|null $exceptionHandler The exception handler.
      */
     private $exceptionHandler = null;
 
@@ -93,10 +93,14 @@ class Debugger implements DebuggerInterface
     {
         // Set the error and exception handler.
         if (!is_null($this->errorHandler)) {
-            set_error_handler($this->errorHandler->getCallable());
+            /** @var null|callable $func */
+            $func = $this->errorHandler->getCallable();
+            set_error_handler($func);
         }
         if (!is_null($this->exceptionHandler)) {
-            set_exception_handler($this->exceptionHandler->getCallable());
+            /** @var null|callable $func */
+            $func = $this->exceptionHandler->getCallable();
+            set_exception_handler($func);
         }
         // Determine which mode is set.
         $mode = trim($mode);
