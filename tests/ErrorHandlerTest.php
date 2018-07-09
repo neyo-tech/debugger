@@ -12,6 +12,8 @@ declare(strict_types=1);
 
 namespace Neyo\Tests;
 
+use Neyo\ErrorHandler;
+
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
@@ -23,6 +25,6 @@ class ErrorHandlerTest extends TestCase
     public function testConstructor()
     {
         $this->expectException(RuntimeException::class);
-        $exceptionHandler = new ExceptionHandler('UnkownFunction');
+        $errorHandler = new ErrorHandler('UnkownFunction');
     }
 }
