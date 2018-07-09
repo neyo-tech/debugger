@@ -87,7 +87,7 @@ class Debugger implements DebuggerInterface
      *
      * @return void Returns nothing.
      */
-    public function run(string $mode = ''): void
+    public function run(string $mode = '')
     {
         // Set the error and exception handler.
         if (!is_null($this->errorHandler)) {
