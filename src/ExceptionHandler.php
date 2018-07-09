@@ -56,6 +56,6 @@ class ExceptionHandler implements ExceptionHandlerInterface
     {
         $func = $this->callableFunction;
 
-        return $func();
+        return $func;
     }
 }
