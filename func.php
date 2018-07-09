@@ -9,7 +9,7 @@ function testErrorHandler($errno, $errstr, $errfile, $errline)
         case E_USER_ERROR:
             echo "<b>My ERROR</b> [$errno] $errstr<br />\n";
             echo "  Fatal error on line $errline in file $errfile";
-            echo ", PHP " . PHP_VERSION . " (" . PHP_OS . ")<br />\n";
+            echo ', PHP '.PHP_VERSION.' ('.PHP_OS.")<br />\n";
             echo "Aborting...<br />\n";
             exit(1);
             break;
@@ -23,9 +23,11 @@ function testErrorHandler($errno, $errstr, $errfile, $errline)
             echo "Unknown error type: [$errno] $errstr<br />\n";
             break;
     }
+
     return true;
 }
 
-function testExceptionHandler($exception) {
-    echo "Uncaught exception: " , $exception->getMessage(), "\n";
+function testExceptionHandler($exception)
+{
+    echo 'Uncaught exception: ' , $exception->getMessage(), "\n";
 }
