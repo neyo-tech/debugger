@@ -1,23 +1,20 @@
 <?php
+
 declare(strict_types=1);
 /**
  * Neyo PHP Framework.
  *
  * @author @ikorisabi <ikorisabi@gmail.com>.
- *
  * @license <https://github.com/neyo-php-framework/debugger/blob/master/LICENSE> GNU General Public License v3.0.
+ *
  * @link    <https://github.com/neyo-php-framework/debugger>                     Source Code.
  */
 
 namespace Neyo;
 
 use RuntimeException;
-
-use function is_null;
 use function function_exists;
 use function trim;
-
-use const null;
 
 /**
  * @class      ErrorHandler          The error handler.
@@ -25,9 +22,8 @@ use const null;
  */
 class ErrorHandler implements ErrorHandlerInterface
 {
-
     /**
-     * @var string $passableFunction The function name.
+     * @var string The function name.
      */
     private $callableFunction;
 
@@ -59,6 +55,7 @@ class ErrorHandler implements ErrorHandlerInterface
     public function getCallable()
     {
         $func = $this->callableFunction;
+
         return $func();
     }
 }

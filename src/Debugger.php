@@ -1,11 +1,12 @@
 <?php
+
 declare(strict_types=1);
 /**
  * Neyo PHP Framework.
  *
  * @author @ikorisabi <ikorisabi@gmail.com>.
- *
  * @license <https://github.com/neyo-php-framework/debugger/blob/master/LICENSE> GNU General Public License v3.0.
+ *
  * @link    <https://github.com/neyo-php-framework/debugger>                     Source Code.
  */
 
@@ -13,18 +14,16 @@ namespace Neyo;
 
 use RuntimeException;
 use UnexpectedValueException;
-
+use const false;
+use const null;
+use const true;
 use function error_reporting;
-use function set_error_handler;
-use function set_exception_handler;
 use function in_array;
 use function ini_set;
+use function set_error_handler;
+use function set_exception_handler;
 use function strcmp;
 use function trim;
-
-use const null;
-use const false;
-use const true;
 
 /**
  * @class      Debugger          The debugger.
@@ -32,29 +31,28 @@ use const true;
  */
 class Debugger implements DebuggerInterface
 {
-
     /**
-     * @var bool $production Is the environment running in production mode.
+     * @var bool Is the environment running in production mode.
      */
     private static $production = null;
 
     /**
-     * @var bool $development Is the environment running in development mode.
+     * @var bool Is the environment running in development mode.
      */
     private static $development = null;
 
     /**
-     * @var array $modes Contains a list of avaliable modes.
+     * @var array Contains a list of avaliable modes.
      */
-    private $modes = array('production', 'development');
+    private $modes = ['production', 'development'];
 
     /**
-     * @var ErrorHandlerInterface|null $errorHandler The error handler.
+     * @var ErrorHandlerInterface|null The error handler.
      */
     private $errorHandler = null;
 
     /**
-     * @var ExceptionHandlerInterface|null $exceptionHandler The exception handler.
+     * @var ExceptionHandlerInterface|null The exception handler.
      */
     private $exceptionHandler = null;
 
@@ -109,13 +107,13 @@ class Debugger implements DebuggerInterface
                 // Run the environment in production mode.
                 error_reporting(0);
                 ini_set('display_errors', 'Off');
-                self::$production  = true;
+                self::$production = true;
                 self::$development = false;
             } elseif (strcmp($mode, 'development') === 0) {
                 // Run the environment in development mode.
                 error_reporting(-1);
                 ini_set('display_errors', 'On');
-                self::$production  = false;
+                self::$production = false;
                 self::$development = true;
             } else {
                 throw new RuntimeException('An unknown error has occured.');
@@ -126,7 +124,7 @@ class Debugger implements DebuggerInterface
     }
 
     /**
-     * Check to see if the environment is running in production mode
+     * Check to see if the environment is running in production mode.
      *
      * @return bool Returns TRUE if it is running in production mode and FALSE if it is not.
      */
@@ -136,7 +134,7 @@ class Debugger implements DebuggerInterface
     }
 
     /**
-     * Check to see if the environment is running in development mode
+     * Check to see if the environment is running in development mode.
      *
      * @return bool Returns TRUE if it is running in development mode and FALSE if it is not.
      */
