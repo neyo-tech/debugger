@@ -1,5 +1,5 @@
 {
-    "name": "neyo/debugger",
+    "name": "neyo-php-framework/debugger",
     "description": "A simple debugger for your web applications.",
     "license": "MIT",
     "keywords": [
