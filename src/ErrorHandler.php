@@ -56,6 +56,6 @@ class ErrorHandler implements ErrorHandlerInterface
     {
         $func = $this->callableFunction;
 
-        return $func();
+        return $func;
     }
 }
