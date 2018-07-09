@@ -12,6 +12,7 @@ declare(strict_types=1);
 
 namespace Neyo\Tests;
 
+use UnexpectedValueException;
 use Neyo\Debugger;
 use Neyo\ErrorHandler;
 use Neyo\ExceptionHandler;
@@ -36,5 +37,14 @@ class DebuggerTest extends TestCase
         $this->assertTrue(!Debugger::isProductionMode());
         $this->assertTrue(Debugger::isDevelopmentMode());
         $this->assertTrue(true);
+    }
+
+    public function testUnexpectedException()
+    {
+        $this->expectException(UnexpectedValueException::class);
+        $errorHandler = new ErrorHandler('testErrorHandler');
+        $exceptionHandler = new ExceptionHandler('testExceptionHandler');
+        $debugger = new Debugger($errorHandler, $exceptionHandler);
+        $debugger->run('testUnknownMode');
     }
 }
