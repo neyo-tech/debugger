@@ -1,1 +1,8 @@
-
+<?xml version="1.0"?>
+<psalm name="neyo-php-framework/debugger Checks"
+       useDocblockTypes="true"
+       totallyTyped="true">
+    <projectFiles>
+        <directory name="./src" />
+    </projectFiles>
+</psalm>
