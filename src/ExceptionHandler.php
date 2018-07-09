@@ -54,10 +54,10 @@ class ExceptionHandler implements ExceptionHandlerInterface
     /**
      * Return the error handler function.
      *
-     * @return callable The error handler function
+     * @return mixed The error handler function
      */
     public function getCallable()
     {
-        return $callableFunction();
+        return $this->callableFunction();
     }
 }
