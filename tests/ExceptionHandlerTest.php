@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * Neyo PHP Framework.
@@ -8,17 +9,17 @@ declare(strict_types=1);
  *
  * @link    <https://github.com/neyo-php-framework/debugger>                     Source Code.
  */
+
 namespace Neyo\Tests;
 
 use Neyo\ExceptionHandler;
-
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
 /**
  * @class ExceptionHandlerTest The exception handler test class.
  */
-class ErrorHandlerTest extends TestCase
+class ExceptionHandlerTest extends TestCase
 {
     public function testConstructor()
     {
