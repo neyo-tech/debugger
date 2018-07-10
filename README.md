@@ -13,6 +13,3 @@ The best way to install this cache library is through composer. If you do not ha
 composer require neyo-php-framework/debugger
 ```
 
-## Licensed Under MIT License
-
-A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
