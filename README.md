@@ -13,3 +13,6 @@ The best way to install this cache library is through composer. If you do not ha
 composer require neyo-php-framework/debugger
 ```
 
+## Resources
+- Main Framework Repository <https://github.com/neyo-php-framework/framework/>
+- Neyo Debugger Documentation <https://nenglish.me/neyo-php-framework/debugger/>
