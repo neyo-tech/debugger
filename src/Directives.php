@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * Neyo PHP Framework.
@@ -16,12 +17,11 @@ namespace Neyo;
  */
 class Directives
 {
-
     /**
-     * @var array $directives The list of supported directives.
+     * @var array The list of supported directives.
      */
     public static $directives = [
         'debugger.log',
-        'debugger.session'
+        'debugger.session',
     ];
 }
