@@ -1,6 +1,6 @@
 {
     "name": "neyo-php-framework/debugger",
-    "description": "A simple debugger for your web applications.",
+    "description": "Simple debugging tools for your web applications.",
     "license": "MIT",
     "keywords": [
         "php7",
