@@ -14,5 +14,5 @@ composer require neyo-php-framework/debugger
 ```
 
 ## Resources
-- Main Framework Repository <https://github.com/neyo-php-framework/framework/>
-- Neyo Debugger Documentation <https://nenglish.me/neyo-php-framework/debugger/>
+- Main Framework Repository (<https://github.com/neyo-php-framework/framework/>).
+- Neyo Debugger Documentation (<https://nenglish.me/neyo-php-framework/debugger/>).
