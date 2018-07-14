@@ -31,6 +31,12 @@ use function trim;
  */
 class Debugger implements DebuggerInterface
 {
+
+    /**
+     * @var array The requested directives.
+     */
+    private $requestedDirectives = [];
+
     /**
      * @var bool Is the environment running in production mode.
      */
@@ -109,12 +115,14 @@ class Debugger implements DebuggerInterface
                 ini_set('display_errors', 'Off');
                 self::$production = true;
                 self::$development = false;
+                $this->log(in_array('debugger.log', $this->requestedDirectives));
             } elseif (strcmp($mode, 'development') === 0) {
                 // Run the environment in development mode.
                 error_reporting(-1);
                 ini_set('display_errors', 'On');
                 self::$production = false;
                 self::$development = true;
+                $this->log(in_array('debugger.log', $this->requestedDirectives));
             } else {
                 throw new RuntimeException('An unknown error has occured.');
             }
@@ -141,5 +149,17 @@ class Debugger implements DebuggerInterface
     public static function isDevelopmentMode(): bool
     {
         return (bool) self::$development;
+    }
+
+    /**
+     * Log the debugging process.
+     *
+     * @param bool  Should we log the debugging process.
+     * @param array A list of error messages to display.
+     *
+     * @return void Returns nothing.
+     */
+    public function log(bool $shouldWeLogDebugger, array $errors = [])
+    {
     }
 }
