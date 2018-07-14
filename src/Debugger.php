@@ -31,7 +31,6 @@ use function trim;
  */
 class Debugger implements DebuggerInterface
 {
-
     /**
      * @var array The requested directives.
      */
