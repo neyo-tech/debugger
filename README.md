@@ -15,6 +15,16 @@ The best way to install this debugging library is through composer. If you do no
 composer require neyo-php-framework/debugger
 ```
 
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/neyo-php-framework/debugger/tags).
+
+## Authors
+
+* **Nicholas English** - *Maintainer* - [PurpleBooth](https://github.com/ikorisabi)
+
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
 ## Services
 - Vimeo Psalm (https://getpsalm.org/)
 - Travis CI (https://travis-ci.org/)
