@@ -7,6 +7,8 @@
 
 ## Installation
 
+> You can alternatively just clone this repository.
+
 via Composer:
 
 The best way to install this debugging library is through composer. If you do not have composer installed you can install it directly from thier website (https://getcomposer.org/). After composer is successfully install run the command line code below.
