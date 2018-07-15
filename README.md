@@ -17,6 +17,8 @@ The best way to install this debugging library is through composer. If you do no
 composer require neyo-php-framework/debugger
 ```
 
+That's all enjoy! 
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/neyo-php-framework/debugger/tags).
