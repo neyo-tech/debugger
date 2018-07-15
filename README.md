@@ -21,13 +21,13 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Nicholas English** - *Maintainer* - [PurpleBooth](https://github.com/ikorisabi)
+* **Nicholas English** - *Maintainer* - [ikorisabi](https://github.com/ikorisabi)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## Services
-- Vimeo Psalm (https://getpsalm.org/)
-- Travis CI (https://travis-ci.org/)
-- Style CI (https://styleci.io/)
-- Coveralls (https://coveralls.io/)
+* Vimeo Psalm (https://getpsalm.org/)
+* Travis CI (https://travis-ci.org/)
+* Style CI (https://styleci.io/)
+* Coveralls (https://coveralls.io/)
 
