@@ -24,7 +24,7 @@
         "php": ">=7.0"
     },
     "suggest": {
-        "neyo-php-framework/logger": ""
+        "neyo-php-framework/logger": "Enables the <debugger.log> directive."
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5|^7.1",
