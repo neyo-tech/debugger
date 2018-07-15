@@ -23,7 +23,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Nicholas English** - *Maintainer* - [ikorisabi](https://github.com/ikorisabi)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/neyo-php-framework/debugger/graphs/contributors) who participated in this project.
 
 ## Services
 * Vimeo Psalm (https://getpsalm.org/)
